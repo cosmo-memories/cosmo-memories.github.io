@@ -4,16 +4,23 @@ import './App.css';
 import HelloWorld from './HelloWorld';
 import Main from './Main';
 import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme ({
+  palette: {
+    primary: {
+      main: '#282c34'
+    },
+    secondary: {
+      main: '#61dafb'
+    }
+  }
+})
 
 function App() {
   return (
+    <ThemeProvider theme = {theme}>
     <div className="App">
-      {/* <header className="App-header">
-        <p><h1>OwO</h1></p>
-        <p>Placeholder page!</p>
-      </header> */}
-      {/* <Header /> */}
-
       <BrowserRouter>
         <div>
           <Routes>
@@ -23,6 +30,7 @@ function App() {
         </div>
       </BrowserRouter>
     </div>
+    </ThemeProvider>
   );
 }
 
