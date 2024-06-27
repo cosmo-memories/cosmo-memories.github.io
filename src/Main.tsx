@@ -5,14 +5,25 @@ import { Button } from "@mui/material";
 const Main = () => {
     return (
         <div>
-            <p>
-                <h1>!! Placeholder !!</h1>
+            <p className='box-head'>
+                <h1>cosmo-memories.github.io</h1>
             </p>
-            <p>
+            <div className='box'>
+                <p className='text-block'>
+                    This is a placeholder page.
+                </p>
+                <p className='text-block'>
+                    I don't know what I'm doing. Send help.
+                </p>
+                <p>
                 <Link to={"/helloworld"} className='tlink'>
-                    <Button variant="outlined" color="secondary" onClick={() => {}}>Hello World</Button>
-                </Link>
+                    <Button variant="contained" onClick={() => {}}>Hello World</Button>
+                </Link> &nbsp;
+                <a href='https://github.com/cosmo-memories/'>
+                    <Button variant="contained" onClick={() => {}}>Github Profile</Button>
+                </a>
             </p>
+            </div>
         </div>
     )
 }
