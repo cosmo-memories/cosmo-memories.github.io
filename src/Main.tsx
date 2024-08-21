@@ -18,7 +18,12 @@ const Main = () => {
                 <p>
                 <Link to={"/helloworld"} className='tlink'>
                     <Button variant="contained" onClick={() => {}}>Hello World</Button>
-                </Link> &nbsp;
+                </Link>
+                &nbsp;
+                <a href='https://cosmo-memories.github.io/blog'>
+                    <Button variant="contained" onClick={() => {}}>Blog</Button>
+                </a>
+                &nbsp;
                 <a href='https://github.com/cosmo-memories/'>
                     <Button variant="contained" onClick={() => {}}>Github Profile</Button>
                 </a>
