@@ -5,7 +5,7 @@ const HelloWorld = () => {
     return (
         <div>
             <p className='box-head'>
-                <h1>cosmo-memories.github.io</h1>
+                <h1 className= 'header-text'>cosmo memories</h1>
             </p>
             <div className='box'>
                 <h1>Hello World!</h1>

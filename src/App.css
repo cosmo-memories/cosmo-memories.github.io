@@ -8,6 +8,9 @@
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  background: #282829;
+  background-attachment: fixed !important;
+  background: linear-gradient(#222227, #0b0b0c);
 }
 
 .text-block {
@@ -30,7 +33,7 @@
   position: relative;
   top: 2.5vh;
   align-items: center;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: #0f1218;
   width: 40vw;
   min-height: 2vh;
@@ -40,4 +43,10 @@
 
 .App-link {
   color: #25aacf;
+}
+
+.header-text {
+  color:#ffffff;
+  letter-spacing: 20px;
+  font-variant: small-caps;
 }
