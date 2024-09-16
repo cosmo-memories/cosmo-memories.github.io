@@ -1,9 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './HelloWorld';
 import Main from './Main';
-import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import TicTacToe from './TicTacToe';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const theme = createTheme ({
@@ -25,6 +24,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/helloworld" element={<HelloWorld/>}/>
+            <Route path="/ttt" element={<TicTacToe/>}/>
             <Route path="/*" element={<Main/>}/>
           </Routes>
         </div>

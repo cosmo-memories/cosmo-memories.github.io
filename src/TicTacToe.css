@@ -1,0 +1,35 @@
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    /* float: left; */
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.box {
+    align-items: center;
+    background-color: #ffffff;
+    color: #0f1218;
+    width: 40vw;
+    border-radius: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 2vh;
+}
+  
+  

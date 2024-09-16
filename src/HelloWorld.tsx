@@ -19,11 +19,15 @@ const HelloWorld = () => {
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
                 <p>
-                    And here is a button:
+                    And here are some buttons:
                 </p>
                 <p>
                     <Link to={"/"} className='tlink'>
                         <Button variant="contained" onClick={() => {}}>Back to Main</Button>
+                    </Link>
+                    &nbsp;
+                    <Link to={"/ttt"} className='tlink'>
+                        <Button variant="contained" onClick={() => {}}>Play Tic Tac Toe</Button>
                     </Link>
                 </p>
             </div>
