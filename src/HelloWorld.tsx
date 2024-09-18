@@ -4,15 +4,22 @@ import { Link } from "react-router-dom";
 const HelloWorld = () => {
     return (
         <div>
-            <p className='box-head'>
-                <h1 className= 'header-text'>cosmo memories</h1>
-            </p>
-            <div className='box'>
+            <div className='content'>
                 <h1>Hello World!</h1>
                 <p>
-                    Hello world! Here is some text.
+                    Hello world! This is my testing ground where I unravel the magic of webdev.
                 </p>
-                <p className='text-block'>
+                <p>
+                    Here is some text:
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -22,11 +29,11 @@ const HelloWorld = () => {
                     And here are some buttons:
                 </p>
                 <p>
-                    <Link to={"/"} className='tlink'>
+                    <Link to={"/"}>
                         <Button variant="contained" onClick={() => {}}>Back to Main</Button>
                     </Link>
-                    &nbsp;
-                    <Link to={"/ttt"} className='tlink'>
+                    &nbsp; &nbsp; &nbsp;
+                    <Link to={"/ttt"}>
                         <Button variant="contained" onClick={() => {}}>Play Tic Tac Toe</Button>
                     </Link>
                 </p>

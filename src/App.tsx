@@ -19,7 +19,17 @@ const theme = createTheme ({
 function App() {
   return (
     <ThemeProvider theme = {theme}>
-    <div className="App">
+    <div className="wrapper">
+      <div id="title">
+        <h1 className="left"><b>COSMO MEMORIES</b></h1>
+        <h1 className="right"><a href="https://cosmo-memories.github.io/">HOME</a><b> // </b>
+                          <a href="https://cosmo-memories.github.io/blog/">BLOG</a><b> // </b>
+                          <a href="https://cosmo-memories.github.io/math/">MATH</a><b> // </b>
+                          <a href="https://github.com/cosmo-memories/">GITHUB</a></h1>
+        {/* <h2>HOME</h2> */}
+        <br />
+        <hr />
+      </div>
       <BrowserRouter>
         <div>
           <Routes>

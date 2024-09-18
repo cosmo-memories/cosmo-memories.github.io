@@ -1,11 +1,10 @@
-.App {
+/* .App {
   text-align: center;
   background-color: #0f1218;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
   background: #282829;
@@ -29,11 +28,10 @@
   font-size: 2vh;
 }
 
-.box-head {
+.head {
   position: relative;
   top: 2.5vh;
   align-items: center;
-  /* background-color: #ffffff; */
   color: #0f1218;
   width: 40vw;
   min-height: 2vh;
@@ -49,4 +47,86 @@
   color:#ffffff;
   letter-spacing: 20px;
   font-variant: small-caps;
+} */
+
+
+.current {
+  color: rgb(0, 2, 128);
+}
+
+a {
+  color:#7273a3;
+  font-weight:400;
+  text-decoration:none;
+
+  &:hover {
+    color: #d7deff;
+  }
+}
+
+.wrapper {
+  max-width: 90%;
+  margin:0 auto;
+  position:relative;
+  padding: 0 20px;
+}
+
+body {
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+  font: 15px Helvetica, Arial, sans-serif;
+  color:#f0e7d5;
+  font-weight: normal;
+  background: #282829;
+  background-attachment: fixed !important;
+  background: linear-gradient(#222227, #0b0b0c);
+}
+
+.content {
+  margin: 0px 50px 0px 50px;
+  text-align: center;
+}
+
+#title {
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  h1 {
+    color: #bebed7;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    margin: 0px 0px 0px 1px;
+    letter-spacing: 10px;
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+    }
+
+  }
+
+  h2 {
+    color: #e8e8f1;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 0 0;
+    font-family: monospace;
+    font-size: 35px;
+    letter-spacing: 7px;
+    line-height: 30px;
+    margin-top:15px;
+    font-variant: small-caps;
+  }
+
 }
