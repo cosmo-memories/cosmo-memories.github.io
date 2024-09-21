@@ -2,6 +2,7 @@ import './App.css';
 import HelloWorld from './HelloWorld';
 import Main from './Main';
 import TicTacToe from './TicTacToe';
+import PageNav from './commmon/nav';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -31,7 +32,8 @@ function App() {
         <hr />
       </div>
       <BrowserRouter>
-        <div>
+        <div className='navbar'><PageNav /></div>
+        <div className="content">
           <Routes>
             <Route path="/helloworld" element={<HelloWorld/>}/>
             <Route path="/ttt" element={<TicTacToe/>}/>

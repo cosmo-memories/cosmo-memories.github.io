@@ -4,19 +4,11 @@ import { Button } from "@mui/material";
 const Main = () => {
     return (
         <div>
-            <div className='content'>
-                <p>
-                    This is a placeholder page.
-                </p>
-                <p>
-                    I don't know what I'm doing. Send help.
-                </p>
-                <p>
-                    <Link to={"/helloworld"}>
-                        <Button variant="contained" onClick={() => {}}>Hello World</Button>
-                    </Link>
-                </p>
-            </div>
+            <p>
+                This is a placeholder page. I don't know what I'm doing. Send help.
+                <p />
+                Links to the left are (mostly) not implemented (for now). The current layout also does not work well on mobile devices! I'm working on it.
+            </p>
         </div>
     )
 }

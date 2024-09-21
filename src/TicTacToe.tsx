@@ -92,21 +92,19 @@ const TicTacToe = () => {
 
     return (
         <div>
-            <div className='content'>
-                <h1>Hello World!</h1>
-                <p>
-                    {Board()}
-                </p>
-                <p>
-                    <Link to={"/"}>
-                        <Button variant="contained" onClick={() => {}}>Back to Main</Button>
-                    </Link>
-                    &nbsp; &nbsp; &nbsp;
-                    <Link to={"/helloworld"}>
-                        <Button variant="contained" onClick={() => {}}>Hello World</Button>
-                    </Link>
-                </p>
-            </div>
+            <h1>Hello World!</h1>
+            <p>
+                {Board()}
+            </p>
+            <p>
+                <Link to={"/"}>
+                    <Button variant="contained" onClick={() => {}}>Back to Main</Button>
+                </Link>
+                &nbsp; &nbsp; &nbsp;
+                <Link to={"/helloworld"}>
+                    <Button variant="contained" onClick={() => {}}>Hello World</Button>
+                </Link>
+            </p>
         </div>
     )
 }
