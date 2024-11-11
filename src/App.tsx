@@ -3,6 +3,7 @@ import HelloWorld from './HelloWorld';
 import Main from './Main';
 import TicTacToe from './TicTacToe';
 import PageNav from './commmon/nav';
+import PageHead from './commmon/head';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -22,14 +23,7 @@ function App() {
     <ThemeProvider theme = {theme}>
     <div className="wrapper">
       <div id="title">
-        <h1 className="left"><b>COSMO MEMORIES</b></h1>
-        <h1 className="right"><a href="https://cosmo-memories.github.io/">HOME</a><b> // </b>
-                          <a href="https://cosmo-memories.github.io/blog/">BLOG</a><b> // </b>
-                          <a href="https://cosmo-memories.github.io/math/">MATH</a><b> // </b>
-                          <a href="https://github.com/cosmo-memories/">GITHUB</a></h1>
-        {/* <h2>HOME</h2> */}
-        <br />
-        <hr />
+        <PageHead />
       </div>
       <BrowserRouter>
         <div className='navbar'><PageNav /></div>

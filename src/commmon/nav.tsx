@@ -31,7 +31,7 @@ const PageNav = () => {
                 </div>
             ) : (
                 <div>
-                    <h1><Link to={"/"}>Main</Link> // <Link to={"/"}>About</Link> // <Link to={"/"}>Projects</Link> // <Link to={"/helloworld"}>Testing</Link></h1>
+                    
                 </div>
             )}
         </div>

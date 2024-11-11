@@ -110,25 +110,35 @@ body {
   }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1450px) and (min-width: 1000px) {
   .content {
-    margin: 10px 5% 0px 5%;
+    margin: 200px 5% 0px 5%;
     text-align: left;
   }
   
   .navbar {
-    text-transform: uppercase;
-    text-align: center;
-    margin: 100px 5% 0px 5%;
-    background: #282829;
-    background-attachment: fixed !important;
-    background: linear-gradient(#222227, #0b0b0c);
+    font-size: 0px;
+  }
+}
 
-    h1 {
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      font-size: 18px;
-      letter-spacing: 10px;
-    }
+@media (max-width: 1000px) and (min-width: 650px) {
+  .content {
+    margin: 250px 5% 0px 5%;
+    text-align: left;
+  }
+  
+  .navbar {
+    font-size: 0px;
+  }
+}
+
+@media (max-width: 650px) {
+  .content {
+    margin: 350px 5% 0px 5%;
+    text-align: left;
+  }
+  
+  .navbar {
+    font-size: 0px;
   }
 }
