@@ -1,43 +1,37 @@
-import './App.css';
-import HelloWorld from './HelloWorld';
-import Main from './Main';
-import TicTacToe from './TicTacToe';
-import PageNav from './commmon/nav';
-import PageHead from './commmon/head';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Projects from './pages/Projects'
 
-const theme = createTheme ({
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#282c34'
+      main: '#546E7A',
     },
     secondary: {
-      main: '#61dafb'
-    }
-  }
-})
+      main: '#78909C',
+    },
+    mode: 'dark'
+  },
+});
 
 function App() {
   return (
-    <ThemeProvider theme = {theme}>
-    <div className="wrapper">
-      <div id="title">
-        <PageHead />
-      </div>
-      <BrowserRouter>
-        <div className='navbar'><PageNav /></div>
-        <div className="content">
-          <Routes>
-            <Route path="/helloworld" element={<HelloWorld/>}/>
-            <Route path="/ttt" element={<TicTacToe/>}/>
-            <Route path="/*" element={<Main/>}/>
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
