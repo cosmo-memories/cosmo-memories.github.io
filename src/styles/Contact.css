@@ -1,0 +1,40 @@
+.contact-container {
+  margin: 0;
+  text-align: left;
+  width: 100vw;
+}
+
+.text-wrapper {
+  padding: 5%;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+}
+
+.contact-header h1,
+.contact-icon, .contact-title, .contact-label {
+  margin: 0;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+}
+
+.contact-description {
+  margin-bottom: 2rem;
+}
+
+.contact-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+
+.contact-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}

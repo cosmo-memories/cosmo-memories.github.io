@@ -1,0 +1,42 @@
+.main-container {
+    margin: 0;
+    text-align: left;
+    width: 100vw;
+}
+
+.text-wrapper {
+    padding: 5%;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.subheader {
+    margin: 0;
+}
+
+.description {
+    max-width: 70%;
+}
+
+.bullet-list {
+    padding-left: 40px;
+}
+
+
+@media (max-width: 600px) {
+    .subheader {
+        margin-top: 5%;
+    }
+
+    .main-header {
+        display: block;
+        text-align: center;
+    }
+
+    .description {
+      max-width: 100%;
+    }
+  }
