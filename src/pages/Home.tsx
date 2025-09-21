@@ -30,6 +30,7 @@ function Home() {
             <b>Latest Updates:</b>
             <br />
             <ul className="bullet-list">
+              <li><b>21/09/25:</b> Rewrote most site text; some still needs work but there should be no more lorem ipsum.</li>
               <li><b>18/09/25:</b> Reworked project page cards in preparation for adding content.</li>
               <li><b>01/09/25:</b> Finished refactoring styling. Working on mobile responsiveness and general layout finetuning.</li>
               <li><b>16/08/25:</b> The revival begins! Began refactoring pages to remove inline styling. Most of this page will be retooled or replaced.</li>
@@ -40,7 +41,7 @@ function Home() {
             <b>TODO:</b>
             <br />
             <ul className="bullet-list">
-              <li>Write and implement all site copy</li>
+              <li>Redesign contacts page and ensure details are up to date</li>
               <li>Source images as needed, incl. backgrounds</li>
               <li>Host and add material to 'Projects' section</li>
               <li>Improve responsiveness of layout across devices</li>

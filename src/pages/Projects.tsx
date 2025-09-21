@@ -7,35 +7,26 @@ import { PiStarFourFill } from "react-icons/pi";
 
 const projectData = [
   {
-    title: "Daguerreo Mathematics",
+    title: "Collabrick (formerly Home Helper)",
+    description: "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly LLM chatbot to help users manage their time and money. A full-stack application built in Java Spring, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
+    note: "Links, documentation, and details coming by the end of next week!",
+  },
+  {
+    title: "FullStacks: A Book Journal",
+    description: "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
+    note: "NOTE: FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of October. Sorry!",
+  },
+  {
+    title: "Daguerreo: Mathematics Notes & Reference",
     links: [
       { label: "VISIT", href: "https://cosmo-memories.github.io/math/" },
       { label: "ABOUT", href: "https://cosmo-memories.github.io/math/about.html" }
     ],
-    description: "Small archive of mathematics notes and reference material from my university study. Static site built with Jekyll.",
-    note: "Very much a work in progress.",
+    description: "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and hosted on Github Pages, and should be considered a low-priority, perpetual work in pogress; I am summarizing and uploading things as I have the time.",
   },
   {
-    title: "Home Helper",
-    description: "A group project I worked on during the third year of my BSc; a communication and budget tracking app for DIY enthusiasts.",
-    note: "Details coming very soon!",
-  },
-  {
-    title: "FullStacks: A Book Journal",
-    description: "A full-stack MERN project where I track and comment on all the books I read!",
-    note: "Mostly functional!! Just needs some cleanup before hosting!",
-  },
-  {
-    title: "XIVFishing API",
-    description: "A relational databse tracking fish and fishing skill information for the critically acclaimed MMO Final Fantasy XIV, with a Node.js API to enable access.",
-  },
-  {
-    title: "Memoria Blog",
-    description: "A full-stack personal blog platform with posts stored in a relational database. There will be posts about video games, books, and sometimes dev stuff.",
-  },
-  {
-    title: "Coming Soon",
-    description: "This project is coming soon!",
+    title: "Coming Soon: Memoria Blog 2.0",
+    description: "Coming very soon, a full-stack personal blog platform to replace my old Jekyll blog! There will be posts about my dev journey, and maybe video games and other stuff. Memoria 2.0 is planned to be fully handmade with a React frontend, REST API using Node.js and Express, and a relational database for post storage. Expect a prototype by the end of 2025!",
   }
 ];
 
@@ -45,7 +36,7 @@ function MuiCard({ title, description, links = [], note}: ProjectCardProps) {
   const LINK_LABELS = ["VISIT", "ABOUT", "DOCUMENTATION"];
 
   return(
-  <Card sx ={{ width: { xs: "100%" }, height: { xs: 200 } }} className="single-card">
+  <Card sx ={{ width: { xs: "100%" }, height: { md: 250 } }} className="single-card">
     <CardMedia image=""></CardMedia>
     {/* TODO: Images */}
     <CardContent className="card-content">
