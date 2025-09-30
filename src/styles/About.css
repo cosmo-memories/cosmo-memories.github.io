@@ -69,6 +69,7 @@
 
 .list-box {
   max-width: 300px;
+  min-width: 250px; 
   padding: 15px;
   box-sizing: border-box;
   overflow: auto;
@@ -81,7 +82,11 @@
   margin: 0;
 }
 
-@media (max-width: 900px) {
+.bullet-list li {
+  margin-top: 10px;
+}
+
+@media (max-width: 1030px) {
   .about-text-left,
   .about-text-right {
     max-width: 100%;

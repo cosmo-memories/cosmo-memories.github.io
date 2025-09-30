@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Card, CardContent, Stack } from "@mui/material";
 import { GiStarSwirl } from "react-icons/gi";
 import { PiShootingStarFill } from "react-icons/pi";
 import { TbStarsFilled } from "react-icons/tb";
@@ -43,35 +43,43 @@ function About() {
           <p className="about-text-right">
             I have experience in a number of different languages and frameworks, specializing in <b>Java</b> and <b>JavaScript</b>. Some of my areas of experience include:
           </p>
-          <div className="list-container">
-            <div className="list-box">
-              <b>Java:</b>
-              <ul className="bullet-list">
-                <li>Spring and Spring Boot</li>
-                <li>Swing</li>
-                <li>Hibernate</li>
-              </ul>
-            </div>
 
-            <div className="list-box">
-              <b>JavaScript/TypeScript:</b>
-              <ul className="bullet-list">
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
-              </ul>
-            </div>
+          <div className="list-container" style={{ margin: "20px" }}>
+            <Card className="list-box" elevation={1} sx={{ minHeight: 100, padding: 1 }}>
+              <CardContent>
+                <b>Java:</b>
+                <ul className="bullet-list">
+                  <li>Spring and Spring Boot</li>
+                  <li>Swing</li>
+                  <li>Hibernate</li>
+                </ul>
+              </CardContent>
+            </Card>
 
-            <div className="list-box">
-              <b>Other:</b>
-              <ul className="bullet-list">
-                <li>SQL (MySQL, MariaDB, Oracle, H2)</li>
-                <li>MongoDB</li>
-                <li>Cucumber</li>
-                <li>HTML/CSS</li>
-              </ul>
-            </div>
+            <Card className="list-box" elevation={1} sx={{ minHeight: 100, padding: 1 }}>
+              <CardContent>
+                <b>JavaScript/TypeScript:</b>
+                <ul className="bullet-list">
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>Express</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="list-box" elevation={1} sx={{ minHeight: 100, padding: 1 }}>
+              <CardContent>
+                <b>Other:</b>
+                <ul className="bullet-list">
+                  <li>SQL (MySQL, MariaDB, Oracle, H2, and others)</li>
+                  <li>MongoDB</li>
+                  <li>Cucumber</li>
+                  <li>HTML/CSS</li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
+
 
           <div className="about-text-right">
             I also have experience with <b>Python</b>, <b>C++</b>, and more, as well as working as part of a team following <b>agile methodology</b> under the <b>Scrum</b> framework!
