@@ -11,6 +11,12 @@ function About() {
   return (
     <Box className="about-container">
       <Stack direction="column" spacing={0}>
+        <Box className="about-section left">
+          Reworking in progress, please check back in 24hrs or so.
+        </Box>
+      </Stack>
+
+      {/* <Stack direction="column" spacing={0}>
 
         <Box className="about-section left">
           <div className="about-heading">
@@ -105,7 +111,7 @@ function About() {
           </p>
         </Box>
 
-      </Stack>
+      </Stack> */}
     </Box>
   );
 }
