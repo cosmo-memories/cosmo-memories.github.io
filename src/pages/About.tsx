@@ -1,7 +1,8 @@
-import { Box, Card, CardContent, Stack } from "@mui/material";
-import { GiStarSwirl } from "react-icons/gi";
-import { PiShootingStarFill } from "react-icons/pi";
-import { TbStarsFilled } from "react-icons/tb";
+// import { Box, Card, CardContent, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+// import { GiStarSwirl } from "react-icons/gi";
+// import { PiShootingStarFill } from "react-icons/pi";
+// import { TbStarsFilled } from "react-icons/tb";
 
 import "../styles/About.css";
 
