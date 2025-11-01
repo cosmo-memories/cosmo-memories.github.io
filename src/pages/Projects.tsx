@@ -9,13 +9,19 @@ const projectData: ProjectCardProps[] = [
     title: "Collabrick (formerly Home Helper)",
     description:
       "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly LLM chatbot to help users manage their time and money. A full-stack application built in Java Spring, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
-    note: "Links, documentation, and details coming by the end of next week!",
+    note: "Links, documentation, and details coming in the next few weeks!",
   },
   {
     title: "FullStacks: A Book Journal",
     description:
       "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
-    note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of October. Sorry!",
+    note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of November. Sorry!",
+  },
+  {
+    title: "SENG Soccer Sim",
+    description:
+      "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!",
+    note: "Development details, design docs, and more coming very soon!"
   },
   {
     title: "Daguerreo: Mathematics Notes & Reference",
@@ -31,6 +37,11 @@ const projectData: ProjectCardProps[] = [
     description:
       "Coming very soon, a full-stack personal blog platform to replace my old Jekyll blog! There will be posts about my dev journey, and maybe video games and other stuff. Memoria 2.0 is planned to be fully handmade with a React frontend, REST API using Node.js and Express, and a relational database for post storage.",
     note: "Expect a prototype by the end of 2025!"
+  },
+    {
+    title: "Coming Soon: More Stuff!!",
+    description:
+      "I'm actively working to get more of my work imported, uploaded, hosted, and documented. Please bear with me while I get things up and running!"
   },
 ];
 

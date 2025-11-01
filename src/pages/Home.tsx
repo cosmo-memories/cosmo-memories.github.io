@@ -30,11 +30,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
+              <li><b>1/11/25:</b> Redesigned the about me page; just needs some images!</li>
               <li><b>2/10/25:</b> Reworked contact page layout; not entirely happy, might redo again later.</li>
               <li><b>30/09/25:</b> Reworked main page layout! Working on layout consistency between pages.</li>
               <li><b>21/09/25:</b> Rewrote most site text; some still needs work but there should be no more lorem ipsum.</li>
               <li><b>18/09/25:</b> Reworked project page cards in preparation for adding content.</li>
-              <li><b>01/09/25:</b> Finished refactoring styling. Working on mobile responsiveness and layout finetuning.</li>
             </ul>
           </Paper>
 
