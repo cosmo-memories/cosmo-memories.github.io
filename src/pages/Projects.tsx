@@ -29,7 +29,7 @@ const projectData: ProjectCardProps[] = [
       { label: "VISIT", href: "https://cosmo-memories.github.io/math/" },
       { label: "LEARN MORE", href: "https://cosmo-memories.github.io/math/about.html" },
     ],
-    image: "/src/assets/images/daguerreo.png",
+    image: "/images/daguerreo.png",
     description:
       "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and is a low-priority, perpetual work in pogress; I am summarizing and uploading things as I have the time.",
   },
