@@ -8,5 +8,6 @@ export type ProjectCardProps = {
     description: string;
     links?: ProjectLink[];
     note?: string;
+    image?: string;
 };
   

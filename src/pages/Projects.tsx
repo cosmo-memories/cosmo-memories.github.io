@@ -27,10 +27,11 @@ const projectData: ProjectCardProps[] = [
     title: "Daguerreo: Mathematics Notes & Reference",
     links: [
       { label: "VISIT", href: "https://cosmo-memories.github.io/math/" },
-      { label: "ABOUT", href: "https://cosmo-memories.github.io/math/about.html" },
+      { label: "LEARN MORE", href: "https://cosmo-memories.github.io/math/about.html" },
     ],
+    image: "/src/assets/images/daguerreo.png",
     description:
-      "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and hosted on Github Pages, and should be considered a low-priority, perpetual work in pogress; I am summarizing and uploading things as I have the time.",
+      "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and is a low-priority, perpetual work in pogress; I am summarizing and uploading things as I have the time.",
   },
   {
     title: "Coming Soon: Memoria Blog 2.0",
@@ -45,7 +46,7 @@ const projectData: ProjectCardProps[] = [
   },
 ];
 
-const linkLabels = ["VISIT", "ABOUT", "DOCUMENTATION"] as const;
+const linkLabels = ["VISIT", "LEARN MORE"] as const;
 
 function Projects() {
   return (
@@ -62,10 +63,17 @@ function Projects() {
               <Grid item xs={12} md={6} key={index} sx={{ display: "flex" }}>
                 <Paper sx={{ p: 3, borderRadius: 3, flexGrow: 1, display: "flex", flexDirection: "column", minHeight: 350 }}
                        className="bounce" elevation={2} >
-                  <Box sx={{ width: "100%", height: 150, backgroundColor: "#000000ff", borderRadius: 2, mb: 2, 
-                             display: "flex", alignItems: "center", justifyContent: "center", color: "#888", fontStyle: "italic", flexShrink: 0 }}>
-                    Image coming soon!
-                  </Box>
+
+                {projectData[index].image ? (
+                    <Box component="img" src={projectData[index].image} alt={title}
+                         sx={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 2, mb: 2, flexShrink: 0, 
+                               border: "1px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}/>
+                  ) : (
+                    <Box sx={{ width: "100%", height: 300, backgroundColor: "#000000ff", borderRadius: 2, mb: 2,
+                              display: "flex", alignItems: "center", justifyContent: "center", color: "#888", fontStyle: "italic", flexShrink: 0 }}>
+                      Image coming soon!
+                    </Box>
+                  )}
 
                   <Typography variant="h6" fontWeight="bold" mb={1}>
                     <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
