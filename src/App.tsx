@@ -6,6 +6,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 
+import FullStacks from './pages/projects/FullStacks'
+
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
 const theme = createTheme({
@@ -36,6 +38,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/contact' element={<Contact />} />
+
+        <Route path='/projects/fullstacks' element={<FullStacks />} />
       </Routes>
     </ThemeProvider>
   )

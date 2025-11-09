@@ -1,4 +1,5 @@
 import { Box, Paper, Typography, Button, Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 import { ProjectLink, ProjectCardProps } from "../types/Projects";
 
 import { FaStar } from "react-icons/fa";
@@ -13,6 +14,9 @@ const projectData: ProjectCardProps[] = [
   },
   {
     title: "FullStacks: A Book Journal",
+    links: [
+      { label: "LEARN MORE", href: "/projects/fullstacks"}
+    ],
     description:
       "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
     note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of November. Sorry!",
@@ -64,7 +68,7 @@ function Projects() {
                 <Paper sx={{ p: 3, borderRadius: 3, flexGrow: 1, display: "flex", flexDirection: "column", minHeight: 350 }}
                        className="bounce" elevation={2} >
 
-                {projectData[index].image ? (
+                  {projectData[index].image ? (
                     <Box component="img" src={projectData[index].image} alt={title}
                          sx={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 2, mb: 2, flexShrink: 0, 
                                border: "1px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}/>
@@ -93,24 +97,31 @@ function Projects() {
                   )}
 
                   <Box sx={{ mt: "auto", display: "flex", flexWrap: "wrap", justifyContent: "flex-end", alignItems: "center" }}>
-                    {linkLabels.map((label, idx) => {
+                    {linkLabels.map((label, index) => {
                       const href = linkMap[label];
                       const disabled = !href;
+                      const isExternal = href && !href.startsWith("/");
 
                       return (
                         <Box key={label} sx={{ display: "flex", alignItems: "center" }}>
-                          {idx > 0 && (
+                          {index > 0 && (
                             <Box sx={{ mx: 1 }}>
                               <PiStarFourFill size="0.9em" className="star-icon" />
                             </Box>
                           )}
-                          <Button variant="text" size="small" href={href} target={disabled ? undefined : "_blank"}
-                                  rel={disabled ? undefined : "noopener noreferrer"} disabled={disabled}
-                                  sx={{ textDecoration: disabled ? "line-through" : "none", pointerEvents: disabled ? "none" : "auto",
-                                        color: disabled ? "rgba(0, 0, 0, 0.38)" : undefined, 
-                                        borderColor: disabled ? "rgba(0, 0, 0, 0.12)" : undefined, minWidth: "auto" }}>
-                            {label}
-                          </Button>
+                          {isExternal ? (
+                            <Button variant="text" size="small" href={href} target="_blank"
+                                    rel="noopener noreferrer" disabled={disabled}
+                                    sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none", pointerEvents: disabled ? "none" : "auto" }}>
+                              {label}
+                            </Button>
+                          ) : (
+                            <Link to={href}>
+                              <Button variant="text" size="small" disabled={disabled} sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none" }}>
+                                {label}
+                              </Button>
+                            </Link>
+                          )}
                         </Box>
                       );
                     })}

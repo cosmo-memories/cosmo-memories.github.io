@@ -59,9 +59,9 @@ function Home() {
             <Typography variant="body2">
               This site is built with <b>Vite</b> + <b>React</b> in <b>TypeScript</b>, and styled with <b>Material UI</b>.
             </Typography>
-            <Typography variant="body2" mt={1}>
+            {/* <Typography variant="body2" mt={1}>
               <b>Image attributions:</b> [ coming soon — there are no images yet! ]
-            </Typography>
+            </Typography> */}
           <Box sx={{ fontSize: "1.2rem", mt: 1 }}>
             <FaRegStar className="star-icon" /> <FaStar className="star-icon" /> <FaRegStar className="star-icon" />
           </Box>
