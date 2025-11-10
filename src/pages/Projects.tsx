@@ -17,6 +17,7 @@ const projectData: ProjectCardProps[] = [
     links: [
       { label: "LEARN MORE", href: "/projects/fullstacks"}
     ],
+    image: "/images/fullstacks.png",
     description:
       "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
     note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of November. Sorry!",

@@ -33,8 +33,7 @@ function FullStacks() {
                 
                 <Paper className="bounce" elevation={3}
                     sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    Image coming soon!
-                    {/* <img src="/images/fullstacks.jpg" alt="FullStacks" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+                    <img src="/images/fullstacks.png" alt="FullStacks" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
             </Box>
 
