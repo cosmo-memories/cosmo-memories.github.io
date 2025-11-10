@@ -30,11 +30,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
-              <li><b>2/11/25:</b> Redesigned contact page again! Mostly happy with design for now.</li>
-              <li><b>1/11/25:</b> Redesigned the about me page; just needs some images!</li>
-              <li><b>2/10/25:</b> Reworked contact page layout; not entirely happy, might redo again later.</li>
-              <li><b>30/09/25:</b> Reworked main page layout! Working on layout consistency between pages.</li>
-              <li><b>21/09/25:</b> Rewrote most site text; some still needs work but there should be no more lorem ipsum.</li>
+              <li><b>11/11/25:</b> Added some details about FullStacks DB schema to the Projects section.</li>
+              <li><b>10/11/25:</b> Started adding some information to Projects section at last!</li>
+              <li><b>2/11/25:</b> Redesigned Contact page again! Mostly happy with design for now.</li>
+              <li><b>1/11/25:</b> Redesigned the About page; just needs some images!</li>
+              <li><b>2/10/25:</b> Reworked Contact page layout; not entirely happy, might redo again later.</li>
             </ul>
           </Paper>
 
@@ -44,10 +44,10 @@ function Home() {
             </Typography>
             <ul className="bullet-list">
               <li>General code cleanup and optimization</li>
-              <li>Source images as needed for About and Projects pages</li>
+              <li>Add images as needed to the About and Projects pages</li>
               <li>Host and add material to Projects section</li>
               <li>Decide on custom URL and move to independent hosting</li>
-              <li>New updates section to list all the changes being made!</li>
+              <li>New Updates section to list all the changes being made!</li>
             </ul>
           </Paper>
         </Box>

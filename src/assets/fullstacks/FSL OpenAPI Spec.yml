@@ -1,0 +1,702 @@
+openapi: '3.0.3'
+info:
+  title: "FullStack Book Journal"
+  version: '1.0'
+  description: "API definition for cosmo-memories' FullStack Book Journal project."
+servers:
+  - url: http://localhost:5000/api/
+    description: "Test Server"
+tags:
+  - name: Testing
+    description: "Dummy endpoints for testing purposes."
+  - name: Access
+    description: "Endpoints for retriving and searching information from the database."
+  - name: Editing
+    description: "Endpoints for adding and editing information from the database. [currently disabled in production]"
+  - name: TODO
+    description: "Endpoints for admin authentication. [WIP]"
+paths:
+  /helloworld:
+    get:
+      tags:
+        - Testing
+      summary: "Hello world!"
+      description: "Dummy test endpoint that returns 'Hello World'."
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  data: 
+                    type: string
+                    description: "Dummy text."
+                    example: "Hello World!"
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+  /users/login:
+    post:
+      tags:
+        - TODO
+      summary: "Log in."
+      description: "Returns a randomly-generated access token. Token should be included in `X-Authorization` header when making edit requests."
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: "User name."
+                  example: "cosmo"
+                password:
+                  type: string
+                  description: "User password."
+                  example: "password"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  message:
+                    type: string
+                    description: "Access token."
+                    example: "JSkIEpXk0b2jLgDpRuKAjGwCbFnDM0Tj"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Incorrectly formatted request."
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Incorrect user ID or password."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+  /users/logout:
+    post:
+      tags:
+        - TODO
+      summary: "Log out."
+      description: "Log out user and invalidate access token."
+      security:
+        - UserToken: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  message:
+                    type: string
+                    description: "Details of operation."
+                    example: "Logged out successfully."
+        '401':
+          description: "Unauthorized"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Cannot log out when you are not logged in."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+  /books:
+    get:
+      parameters:
+      - name: q
+        description: "Search string."
+        in: query
+        required: false
+        schema:
+          type: string
+          example: "Watership"
+      - name: startIndex
+        description: "Start returning results from the designated position. (Note: NOT an array index; assume results start at `1`.)"
+        in: query
+        schema:
+          type: number
+          example: 1
+      - name: count
+        description: "Number of results to return."
+        in: query
+        schema:
+          type: number
+          example: 10
+      tags:
+        - Access
+      summary: "Search books."
+      description: "Retrieve books that match a given search query. An empty query will return all books in the database. Results are ordered by creation date in descending order."
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  totalResults:
+                    type: number
+                    description: "Number of results that matched search string."
+                    example: 1
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Book"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid parameters."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+    post:
+      tags:
+        - Editing
+      summary: "Add book."
+      description: "Add a new book to the database."
+      security:
+        - UserToken: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewBook"
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  data:
+                    $ref: "#/components/schemas/Book"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid parameters."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."       
+  # /search/{query}:
+  #   parameters:
+  #     - name: query
+  #       description: "Search string."
+  #       in: path
+  #       required: true
+  #       schema:
+  #         type: string
+  #         example: "Watership"
+  #   get:
+  #     tags:
+  #       - Access
+  #     summary: "Search books."
+  #     description: "Retrieve books that match a given search query."
+  #     responses:
+  #       '200':
+  #         description: OK
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 success:
+  #                   type: boolean
+  #                   description: "Outcome of operation."
+  #                   example: true
+  #                 data:
+  #                   type: array
+  #                   items:
+  #                     $ref: "#/components/schemas/Book"
+  #       '400':
+  #         description: "Bad Request"
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 success:
+  #                   type: boolean
+  #                   description: "Outcome of operation."
+  #                   example: false
+  #                 message:
+  #                   type: string
+  #                   description: "Details of error."
+  #                   example: "Invalid parameters."
+  #       '500':
+  #         description: "Internal Server Error"
+  #         content:
+  #           application/json:
+  #             schema:
+  #               type: object
+  #               properties:
+  #                 success:
+  #                   type: boolean
+  #                   description: "Outcome of operation."
+  #                   example: false
+  #                 message:
+  #                   type: string
+  #                   description: "Details of error."
+  #                   example: "Internal server error."
+  /books/{id}:
+    parameters:
+      - name: id
+        description: "Book ID."
+        in: path
+        required: true
+        schema:
+          type: number
+          example: 6746491cd2dbe154e93b5942
+    get:
+      tags:
+        - Access
+      summary: "Get book by ID."
+      description: "Retrieve books that match a given ID number."
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  data:
+                    $ref: "#/components/schemas/Book"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Bad request. Not a valid book ID."
+        '404':
+          description: "Not Found"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Not found. No book exists with this ID."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+    put:
+      tags:
+        - Editing
+      summary: "Update book."
+      description: "Update an existing book in the database."
+      security:
+        - UserToken: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewBook"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: true
+                  data:
+                    $ref: "#/components/schemas/Book"
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid ID."
+        '404':
+          description: "Not Found"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid ID."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+    delete:
+      tags:
+        - Editing
+      summary: "Delete book."
+      description: "Delete a book from the database."
+      security:
+        - UserToken: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success: 
+                    type: boolean
+                    description: "Outcome of operation"
+                    example: true
+                  message:
+                    type: string
+                    description: "Informational message."
+                    example: "Record deleted."
+        '400':
+          description: "Bad Request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid ID."
+        '404':
+          description: "Not Found"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Invalid ID."
+        '500':
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: "Outcome of operation."
+                    example: false
+                  message:
+                    type: string
+                    description: "Details of error."
+                    example: "Internal server error."
+components:
+  schemas:
+    Book:
+      title: Book
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "6746491cd2dbe154e93b5942"
+          nullable: false
+        title:
+          type: string
+          example: "Watership Down"
+          nullable: false
+        author:
+          type: array
+          items:
+            $ref: "#/components/schemas/Author"
+        category:
+          type: string
+          example: "Fiction"
+          nullable: false
+        genres:
+          type: array
+          items:
+            type: string
+            example: Adventure
+            nullable: false
+        language:
+          type: string
+          example: "English"
+          nullable: false
+      # cover:
+      #   type: string
+      #   example: "/dummy.jpg"
+      #   nullable: true
+        series:
+          type: string
+          example: "Watership Down"
+          nullable: true
+        volume:
+          type: number
+          example: 1
+          nullable: true
+        notes:
+          type: string
+          example: "Test data."
+          nullable: true
+      # createdAt, updatedAt, __v
+    NewBook:
+      title: NewBook
+      type: object
+      properties:
+        title:
+          type: string
+          example: "Watership Down"
+          nullable: false
+        author:
+          type: array
+          items:
+            $ref: "#/components/schemas/Author"
+        category:
+          type: string
+          example: "Fiction"
+          nullable: false
+        genres:
+          type: array
+          items:
+            type: string
+            example: Adventure
+            nullable: false
+        language:
+          type: string
+          example: "English"
+          nullable: false
+      # cover:
+      #   type: string
+      #   example: "/dummy.jpg"
+      #   nullable: true
+        series:
+          type: string
+          example: "Watership Down"
+          nullable: true
+        volume:
+          type: number
+          example: 1
+          nullable: true
+        notes:
+          type: string
+          example: "Test data."
+          nullable: true
+    Author:
+      title: Author
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "Richard"
+          nullable: false
+        lastName:
+          type: string
+          example: "Adams"
+          nullable: false
+  securitySchemes:
+    UserToken:
+      type: apiKey
+      name: X-Authorization
+      in: header
