@@ -60,7 +60,7 @@ function FullStacks() {
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         This project is exciting because it's my first where I have written absolutely <i>everything</i> from scratch, including my own API specifications in compliance with <b>OpenAPI</b>'s standards. The .yml for the current API spec can be found on GitHub <u><a href="https://github.com/cosmo-memories/cosmo-memories.github.io/blob/main/src/assets/fullstacks/FSL%20OpenAPI%20Spec.yml">here</a></u> — view using <b>Swagger</b> or a similar editor. I will have a native setup to view this in due time, but my current focus is on the app itself!
                     </Typography>
-                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                    <Typography variant="body1" component="p">
                         The FullStacks API uses <b>Mongoose</b> to enforce a schema on MongoDB. Below is a breakdown of that schema detailing the decision making behind each field. Everything about the project, including these specifications, is evolving as I learn more about the process, so please bear with me as things change over time.
                     </Typography>
                 </Paper>
