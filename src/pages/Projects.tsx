@@ -24,12 +24,6 @@ const projectData: ProjectCardProps[] = [
     note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of November. Sorry!",
   },
   {
-    title: "SENG Soccer Sim",
-    description:
-      "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!",
-    note: "Development details, design docs, and more coming very soon!"
-  },
-  {
     title: "Daguerreo: Mathematics Notes & Reference",
     links: [
       { label: "VISIT", href: "https://cosmo-memories.github.io/math/" },
@@ -38,6 +32,13 @@ const projectData: ProjectCardProps[] = [
     image: "/images/daguerreo.png",
     description:
       "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and is a low-priority, perpetual work in pogress; I am summarizing and uploading things as I have the time.",
+  },
+  {
+    title: "SENG Soccer Sim",
+    image: "/images/soccersim.png",
+    description:
+      "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!",
+    note: "Development details, design docs, and more coming very soon!"
   },
   {
     title: "Coming Soon: Memoria Blog 2.0",
