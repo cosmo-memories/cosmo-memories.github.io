@@ -38,12 +38,19 @@ function FullStacks() {
             </Box>
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3}
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
+                    <img src="/images/fullstacks2.png" alt="FullStacks" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; About the Frontend
                     </Typography>
-                    <Typography variant="body1" component="p">
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         FullStacks is undergoing a <b>full frontend rework</b> while it is offline! I'll have more to share about this as it happens, and this page will be updated with pictures and information before everything goes live again.
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        The images on this page show the original frontend; I'm much more experienced in React and JS in general than I was when I first put this together, so I'm excited to show off something a bit more impressive soon.
                     </Typography>
                 </Paper>
             </Box>

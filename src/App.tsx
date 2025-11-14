@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Projects from './pages/Projects'
 
 import FullStacks from './pages/projects/FullStacks'
+import SoccerSim from './pages/projects/SoccerSim'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
 
         <Route path='/projects/fullstacks' element={<FullStacks />} />
+        <Route path='/projects/soccersim' element={<SoccerSim />} />
       </Routes>
     </ThemeProvider>
   )

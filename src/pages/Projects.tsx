@@ -35,6 +35,10 @@ const projectData: ProjectCardProps[] = [
   },
   {
     title: "SENG Soccer Sim",
+    links: [
+      { label: "VISIT", href: "https://github.com/cosmo-memories/seng-soccer-sim" },
+      { label: "LEARN MORE", href: "/projects/soccersim"}
+    ],
     image: "/images/soccersim.png",
     description:
       "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!",
