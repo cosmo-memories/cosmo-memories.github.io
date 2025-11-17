@@ -17,7 +17,7 @@ function About() {
               <GiStarSwirl className="star-icon" />&nbsp; About Me
             </Typography>
             <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-              I'm <b>David</b>, a 32 years old <b>software developer</b>, <b>librarian</b>, and <b>writer</b> hailing from <b>Christchurch, New Zealand</b>, and this site is my personal page, work porfolio, pet project, and whatever else I need it to be.
+              I'm <b>David</b>, a 32 year old <b>software developer</b>, <b>librarian</b>, and <b>writer</b> hailing from <b>Christchurch, New Zealand</b>, and this site is my personal page, work porfolio, pet project, and whatever else I need it to be.
             </Typography>
             <Typography variant="body1" component="p" sx={{ mb: 2 }}>
               I wrote my first HTML at age nine for my Neopets.com user profile, and have been interested in computers and coding ever since.
