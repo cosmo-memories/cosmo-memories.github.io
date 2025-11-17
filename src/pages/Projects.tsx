@@ -41,8 +41,7 @@ const projectData: ProjectCardProps[] = [
     ],
     image: "/images/soccersim.png",
     description:
-      "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!",
-    note: "Development details, design docs, and more coming very soon!"
+      "A small text-based sports management simulation game; made as part of a two-person team during my BSc study, this was my first time working on a full piece of software from beginning to end!"
   },
   {
     title: "Coming Soon: Memoria Blog 2.0",
