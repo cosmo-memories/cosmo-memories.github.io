@@ -9,6 +9,9 @@ const projectData: ProjectCardProps[] = [
   {
     title: "Collabrick",
     image: "/images/collabrick.png",
+    links: [
+      { label: "LEARN MORE", href: "/projects/collabrick"}
+    ],
     description:
       "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly chatbot to help users manage their time and money. A full-stack application built in Java Spring, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
     note: "Links, documentation, and details coming in the next few weeks!",
@@ -115,18 +118,25 @@ function Projects() {
                               <PiStarFourFill size="0.9em" className="star-icon" />
                             </Box>
                           )}
-                          {isExternal ? (
-                            <Button variant="text" size="small" href={href} target="_blank"
-                                    rel="noopener noreferrer" disabled={disabled}
-                                    sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none", pointerEvents: disabled ? "none" : "auto" }}>
+                          {disabled ? (
+                            <Button variant="text" size="small" 
+                                    sx={{ minWidth: "auto", textDecoration: "line-through", pointerEvents: "none"  }}>
                               {label}
                             </Button>
                           ) : (
-                            <Link to={href}>
-                              <Button variant="text" size="small" disabled={disabled} sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none" }}>
+                            isExternal ? (
+                              <Button variant="text" size="small" href={href} target="_blank"
+                                      rel="noopener noreferrer" disabled={disabled}
+                                      sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none", pointerEvents: disabled ? "none" : "auto" }}>
                                 {label}
                               </Button>
-                            </Link>
+                            ) : (
+                              <Link to={href}>
+                                <Button variant="text" size="small" disabled={disabled} sx={{ minWidth: "auto", textDecoration: disabled ? "line-through" : "none" }}>
+                                  {label}
+                                </Button>
+                              </Link>
+                            )
                           )}
                         </Box>
                       );
