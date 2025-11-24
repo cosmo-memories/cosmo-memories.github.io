@@ -14,7 +14,7 @@ const projectData: ProjectCardProps[] = [
     ],
     description:
       "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly chatbot to help users manage their time and money. A full-stack application built in Java Spring, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
-    note: "Links, documentation, and details coming in the next few weeks!",
+    note: "I'm working on getting the app rehosted; for now, you can read about the development and see screenshots at the link below!",
   },
   {
     title: "FullStacks: A Book Journal",
@@ -24,7 +24,7 @@ const projectData: ProjectCardProps[] = [
     image: "/images/fullstacks.png",
     description:
       "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
-    note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of November. Sorry!",
+    note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of December. Sorry!",
   },
   {
     title: "Daguerreo: Mathematics Notes & Reference",
@@ -50,7 +50,7 @@ const projectData: ProjectCardProps[] = [
     title: "Coming Soon: Memoria Blog 2.0",
     description:
       "Coming very soon, a full-stack personal blog platform to replace my old Jekyll blog! There will be posts about my dev journey, and maybe video games and other stuff. Memoria 2.0 is planned to be fully handmade with a React frontend, REST API using Node.js and Express, and a relational database for post storage.",
-    note: "Expect a prototype by the end of 2025!"
+    note: "Expect a prototype by the end of January 2026!"
   },
     {
     title: "Coming Soon: More Stuff!!",
@@ -80,7 +80,7 @@ function Projects() {
                   {projectData[index].image ? (
                     <Box component="img" src={projectData[index].image} alt={title}
                          sx={{ width: "100%", height: 300, objectFit: "cover", borderRadius: 2, mb: 2, flexShrink: 0, 
-                               border: "1px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}/>
+                               border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}/>
                   ) : (
                     <Box sx={{ width: "100%", height: 300, backgroundColor: "#000000ff", borderRadius: 2, mb: 2,
                               display: "flex", alignItems: "center", justifyContent: "center", color: "#888", fontStyle: "italic", flexShrink: 0 }}>

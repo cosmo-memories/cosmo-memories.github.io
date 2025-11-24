@@ -30,7 +30,8 @@ function Collabrick() {
                 </Paper>
                 
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff", border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
                     <img src="/images/collabrick.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
             </Box>
@@ -59,19 +60,26 @@ function Collabrick() {
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    {/* <img src="/images/collabrick2.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!!
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick2.png" alt="Collabrick Renovation Overview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; Renovation Customization
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        The centerpiece of Collabrick's functionality is the ability for users to create and modify <b>Renovation profiles</b>. 
+                        Each "renovation" represents a DIY project that the user is currently undertaking (or plans to). 
+                        Initially, we allowed users to add basic information about their renovation such as its name, a short description, and a list of rooms related to the project. 
+                        Further development saw us add searchable tags, lists of tasks and related budget items, and the ability to add other users as members of the project, giving them specific editing privileges.
                     </Typography>
-                    <Typography variant="body1" component="p">
-                        ...
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        Leveraging <b>Spring Boot</b> and the <b>Hibernate</b> framework to help manage our database interactions, we designed <b>relational database</b> tables for renovations and their associated entities, such as tasks, rooms, and tags. 
+                        During development and local testings, we used an in-memory <b>H2</b> database, migrating to to persistent instances of <b>MariaDB</b> for our staging and production environments.
+                    </Typography>
+                    <Typography variant="caption" component="p" color="text.secondary">
+                        I will upload some entity relationship diagrams and more information about our database design in the near future!
                     </Typography>
                 </Paper>
             </Box>   
@@ -82,37 +90,76 @@ function Collabrick() {
                         <FaStar className="star-icon" />&nbsp; User Profiles
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        Users on Collabrick are required to verify their email address before they can use the application, 
+                        and can also invite their friends via email to join in as participants of their renovations, even if those friends do not have their own account yet.
+                        We used the <b>Spring Mail</b> library to manage these and any other email-related tasks, such as resetting a forgotten password.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        ...
+                        Adding features to user profiles was one of our first major tests when it came to researching solutions to more complex tasks which would require implementing <b>external dependencies</b> on the project. 
+                        Users are allowed to upload a .jpeg, .png, or .svg image for their profile picture; we opted to use <b>Apache Tika</b> for image type detection to help prevent users from uploading unauthorized file types. 
+                        We also allowed users to add a street address to their profile, and used <b>Mapbox</b>'s address API to provide autocomplete functionality on the address form. 
+                        Before adding each dependency, we performed a <b>spike</b> to experiment with our options and choose the best tool for the job, then presented our findings to the product owner for final approval to add the new dependency to the project.
                     </Typography>
                 </Paper>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    {/* <img src="/images/collabrick3.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!!
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick3.png" alt="Collabrick User Profile" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
             </Box>     
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    {/* <img src="/images/collabrick2.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!!
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick4.png" alt="Collabrick Tag System" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; Tagging and Filtering
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        When adding the ability for users to tag their renovations with searchable hashtags, the product owner required that we impose <b>profanity filtering</b> on user inputs. 
+                        Up to five tags can be added per renovation, and we also added an autocomplete dropdown that provides suggestions based on previously entered tags. 
+                        The tag feature proved deceptively difficult to implement, as it was the first time we were faced with having to update a number of elements of the page in real time; 
+                        as well as needing the autocomplete to update with each letter entered, we wanted tags to be added to the list after submission without fully reloading the page each time.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        ...
+                        To address the filtering requirements, we decided on a dual-layered approach. 
+                        We maintained a local list of disallowed words that each tag was checked against, 
+                        before also making a call to <b>ProfanityAPI</b> for more advanced detection. 
+                        This allowed us to leverage a specialized tool with more powerful capabilities without sacrificing all control of the filtering process.
                     </Typography>
                 </Paper>
-            </Box>         
+            </Box>      
+
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; Responsive Design and Testing
+                    </Typography>
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        Every part of Collabrick is designed with both mobile and desktop devices in mind. 
+                        We built the app's frontend with <b>Bootstrap</b>, which allowed us to easily create flexible components that scaled well across different screens. 
+                        As part of our manual testing process, we tested each page and feature across a number of screen and window sizes, 
+                        ensuring all page elements were clear and functional.
+                    </Typography>
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        Some UI elements change entirely at smaller screen sizes in order to maintain functionality; for example, the navigation bar uses <b>media queries</b> to collapse itself into a "hamburger" menu on mobile devices, with 
+                        larger text and buttons that are easy to press on touch screens.
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Over the course of development, we also built a large suite of automated tests using various different tools. 
+                        We employed <b>JUnit</b> for unit testing, <b>Cucumber</b> for acceptance testing, and <b>Playwright</b> for end-to-end testing. 
+                        As part of our PR review checklist, we required all new code to have thorough tests written before merges would be approved, which made sure we were all held to account for the functionality of our code and (most) issues could be caught before they made it into the main branch. 
+                    </Typography>
+                </Paper>
+                <Paper className="bounce" elevation={3}
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick5.png" alt="Collabrick Mobile Design" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </Paper>
+            </Box>       
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
@@ -135,13 +182,13 @@ function Collabrick() {
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    {/* <img src="/images/collabrick4.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!!
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick6.png" alt="Collabrick Budget Graphs" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
-                        <FaStar className="star-icon" />&nbsp; Chatting for Collaboration
+                        <FaStar className="star-icon" />&nbsp; Budgeting Tools
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         ...
@@ -155,7 +202,7 @@ function Collabrick() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
-                        <FaStar className="star-icon" />&nbsp; Brick AI
+                        <FaStar className="star-icon" />&nbsp; Chatting for Collaboration
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         ...
@@ -165,9 +212,28 @@ function Collabrick() {
                     </Typography>
                 </Paper>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-                    {/* <img src="/images/collabrick5.png" alt="Collabrick" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!!
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff", border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick7.png" alt="Collabrick Chat Page" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </Paper>
+            </Box>  
+
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3}
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff", border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+                    <img src="/images/collabrick8.png" alt="Collabrick AI Chat" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </Paper>
+                <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; Brick AI
+                    </Typography>
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        ...
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        ...
+                    </Typography>
                 </Paper>
             </Box>     
         </Box>

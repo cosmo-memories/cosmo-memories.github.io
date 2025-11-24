@@ -32,14 +32,16 @@ function FullStacks() {
                 </Paper>
                 
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff", border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
                     <img src="/images/fullstacks.png" alt="FullStacks" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
             </Box>
 
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3}
-                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
+                    sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
+                          backgroundColor: "#000000ff", border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
                     <img src="/images/fullstacks2.png" alt="FullStacks" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
