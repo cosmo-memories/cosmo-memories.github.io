@@ -72,14 +72,15 @@ function Collabrick() {
                         The centerpiece of Collabrick's functionality is the ability for users to create and modify <b>Renovation profiles</b>. 
                         Each "renovation" represents a DIY project that the user is currently undertaking (or plans to). 
                         Initially, we allowed users to add basic information about their renovation such as its name, a short description, and a list of rooms related to the project. 
-                        Further development saw us add searchable tags, lists of tasks and related budget items, and the ability to add other users as members of the project, giving them specific editing privileges.
+                        Further development saw us add searchable tags, lists of tasks and related budget items, and the ability to add other users as members of the project, giving them specific editing privileges. 
+                        We also fully <b>reengineered</b> the main renovation page mid-development in order to adopt more sleek and functional design.
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         Leveraging <b>Spring Boot</b> and the <b>Hibernate</b> framework to help manage our database interactions, we designed <b>relational database</b> tables for renovations and their associated entities, such as tasks, rooms, and tags. 
                         During development and local testings, we used an in-memory <b>H2</b> database, migrating to to persistent instances of <b>MariaDB</b> for our staging and production environments.
                     </Typography>
                     <Typography variant="caption" component="p" color="text.secondary">
-                        I will upload some entity relationship diagrams and more information about our database design in the near future!
+                        I will upload some entity relationship diagrams and more information about our database design and reengineering in the near future!
                     </Typography>
                 </Paper>
             </Box>   
@@ -191,10 +192,15 @@ function Collabrick() {
                         <FaStar className="star-icon" />&nbsp; Budgeting Tools
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        To help users engage with the application's <b>budget tracking</b> features, the team wanted a fun visual way to convey the spending information for each renovation. 
+                        Renovation owners are able to provide a maximum budget for a number of spending categories, and all members of the renovation team can track their actual spending in each category by adding expenses to their renovation tasks; this information is then reflected in two pie charts on the budgeting page. 
+                        Categories where the renovation's spending exceeds the owner's stated budget are marked in red, and a warning is given on mouseover.
                     </Typography>
-                    <Typography variant="body1" component="p">
-                        ...
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        We employed the <b>Chart.js</b> JavaScript library to display our charts, chosen for its simplicity in both design and implementation.
+                    </Typography>
+                    <Typography variant="caption" component="p" color="text.secondary">
+                        More details about the renovation task system and related design decisions will be added here soon!
                     </Typography>
                 </Paper>
             </Box>   
@@ -205,10 +211,18 @@ function Collabrick() {
                         <FaStar className="star-icon" />&nbsp; Chatting for Collaboration
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        Central to our new vision of Collabrick was the addition of <b>real-time chat rooms</b>. 
+                        After a <b>spike</b> to experiement with different communication tools, we settled on using <b>STOMP.js</b> to handle <b>WebSocket</b> connections. 
+                        The complexity of building this feature was one of the most challenging parts of development, but was eventually successful thanks to our combined knowledge and persistence. 
+                    </Typography>
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        Each renovation has a <b>general chat</b> channel which all that renovation's members can take part in. 
+                        The renovation's owner may then add further channels and selectively invite members as they wish, allowing renovation teams to compartmentalize their discussions. 
+                        Each user on the renovation also has access to a private chat between themselves and "<b>Brick AI</b>"; see below for more information.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        ...
+                        The visual design of chats was modeled after existing popular applications like Slack and Discord, and we also borrowed the familiar method of typing "@" followed by a member's name in order to send them a direct <b>notification</b> of the message. 
+                        Notifications may be viewed by clicking the bell icon in the navigation bar.
                     </Typography>
                 </Paper>
                 <Paper className="bounce" elevation={3}
@@ -229,10 +243,15 @@ function Collabrick() {
                         <FaStar className="star-icon" />&nbsp; Brick AI
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        ...
+                        Affectionately named "<b>Brick</b>", Collabrick's <b>AI assistant</b> is available to interact with in all chat channels. 
+                        Users can ask Brick a question simply by including "@BrickAI" in their message, and Brick will give an appropriate reply based on the context of the renovation details and the messages in the current chat channel. 
+                        Brick's functionality is integrated into the application using the <b>Spring AI</b> extension for Spring, and it leverages the <b>Google Gemini 2.0 Flash-lite</b> model via the Gemini API in order to generate responses; despite its limitations, this model was chosen as we were restricted to free APIs only in accordance with the course requirements. 
+                        To address privacy concerns, users may opt out of having their messages read and remembered by the AI.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        ...
+                        As mentioned above, each member of a given renovation also has a private chat channel where they may converse with Brick without having to tag it in each message. 
+                        Here, they may also ask Brick to <b>automatically create tasks</b> for the renovation by providing it with basic information such as a description and due date. 
+                        Brick's <b>system prompt</b> instructs it how to properly format task information in order for it to be accepted by the application.
                     </Typography>
                 </Paper>
             </Box>     
