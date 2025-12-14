@@ -30,11 +30,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
+              <li><b>14/12/25:</b> Updated Projects section to include my new Balamb Library project.</li>
               <li><b>25/11/25:</b> Added some more details about Collabrick's features.</li>
               <li><b>23/11/25:</b> Added page with some development details for Collabrick. Text is still WIP!</li>
               <li><b>17/11/25:</b> Wrote up some more details about Soccer Sim class design.</li>
               <li><b>14/11/25:</b> Added some screenshots and placeholder text for the Soccer Sim project.</li>
-              <li><b>11/11/25:</b> Added some details about FullStacks DB schema to the Projects section.</li>
             </ul>
           </Paper>
 

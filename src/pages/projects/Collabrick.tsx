@@ -22,10 +22,13 @@ function Collabrick() {
                         <b>Collabrick</b> is a <b>web app</b> for DIY enthusiasts which enables them to track their progress, manage their budgets, share their work, and collaborate with others in real time. 
                         I worked on Collabrick's development as part of a 7-person team for the software engineering course <b>SENG302</b> during the final year of studying for my <b>Bachelor of Science</b>.
                     </Typography>
-                    <Typography variant="body1" component="p">
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         Development took place over the course of a full year, and we operated under an <b>agile</b> philosophy using the well-known <b>scrum</b> framework. 
                         Collabrick itself is built primarily in <b>Java</b>, using the <b>Spring</b> framework via <b>Spring Boot</b>, and also utilizes <b>JavaScript</b>, <b>HTML</b>, and <b>CSS</b>. 
                         We also used a variety of external libraries and technologies during development, details of which may be found in the relevant sections below.
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        You can check out Collabrick's source code <a href="https://github.com/cosmo-memories/collabrick">here</a>! I will have a live version up and running again soon.
                     </Typography>
                 </Paper>
                 
