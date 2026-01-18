@@ -9,6 +9,7 @@ import Projects from './pages/Projects'
 import FullStacks from './pages/projects/FullStacks'
 import SoccerSim from './pages/projects/SoccerSim'
 import Collabrick from './pages/projects/Collabrick'
+import Balamb from './pages/projects/Balamb'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
@@ -44,6 +45,7 @@ function App() {
         <Route path='/projects/fullstacks' element={<FullStacks />} />
         <Route path='/projects/soccersim' element={<SoccerSim />} />
         <Route path='/projects/collabrick' element={<Collabrick />} />
+        <Route path='/projects/balamb' element={<Balamb />} />
       </Routes>
     </ThemeProvider>
   )

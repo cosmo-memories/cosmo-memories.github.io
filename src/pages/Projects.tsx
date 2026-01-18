@@ -19,8 +19,10 @@ const projectData: ProjectCardProps[] = [
   },
     {
     title: "Balamb Library",
+    image: "/images/balamb.png",
     links: [
-      { label: "VISIT", href: "https://github.com/cosmo-memories/balamb"}
+      { label: "VISIT", href: "https://github.com/cosmo-memories/balamb"},
+      { label: "LEARN MORE", href: "/projects/balamb"}
     ],
     description:
       "A brand-new lightweight library cataloging web app built with Spring Boot and designed for ease of use. Balamb is in its early stages and serves as a replacement/new iteration of my older FullStacks cataloging project.",
