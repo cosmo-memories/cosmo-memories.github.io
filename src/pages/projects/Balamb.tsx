@@ -65,6 +65,20 @@ function Balamb() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; 20/1/2026: Database Migration Successful
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Balamb is now using <b>PostgreSQL</b>! I'm pretty excited about this despite it being a relatively simple step to take, 
+                        as I began just an hour or two ago with absolutely no idea what I was doing and now have a working production-ready database!! 
+                        This migration also revealed some obvious bugs in the frontend related to attempting to display books when there are none in the database. 
+                        I have addressed these issues by adding proper null checks and will be working over the next few days to properly fill out the app's test suite.
+                    </Typography>
+                </Paper>
+            </Box>  
+
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; TODOs
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
@@ -73,7 +87,7 @@ function Balamb() {
                             <li>Add support for other media types, eg. games or movies.</li>
                             <li>Improve frontend experience and visual design.</li>
                             <li>Expand search filters to include searching by a specific string, filtering read/unread books, and more.</li>
-                            <li>Migrate to a better RDBMS (ie. PostgreSQL).</li>
+                            <li><s>Migrate to a better RDBMS (ie. PostgreSQL).</s></li>
                         </ul>
                     </Typography>
                 </Paper>
