@@ -79,11 +79,27 @@ function Balamb() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; 27/1/2026: Testing and Bug Fixes
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Balmab now has full <b>unit and integration tests</b> for repository and service methods!! 
+                        Things are looking good, and fleshing out the test suite has allowed me to find and fix a few hidden bugs already. 
+                        Next on the agenda is refactoring and cleaning up some of the more complex controller methods, and at the same time 
+                        making sure all those endpoints have robust tests of their own. 
+                        I am still hoping to launch my first deployment at the end of the week, and have been researching everything I need in 
+                        order to do so. Nervous but excited!
+                    </Typography>
+                </Paper>
+            </Box>  
+
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; TODOs
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         <ul className="bullet-list">
-                            <li>Fill gaps in unit/integration test suite.</li>
+                            <li>Fill gaps in <s>repository, service, and</s> controller tests.</li>
                             <li>Add support for other media types, eg. games or movies.</li>
                             <li>Improve frontend experience and visual design.</li>
                             <li>Expand search filters to include searching by a specific string, filtering read/unread books, and more.</li>
