@@ -30,11 +30,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
+              <li><b>04/02/26:</b> Added another Balamb dev diary entry.</li>
               <li><b>27/01/26:</b> Added latest dev diary entry to the Balamb project page.</li>
               <li><b>19/01/26:</b> Added details about Balamb and the first dev diary entry.</li>
               <li><b>14/12/25:</b> Updated Projects section to include my new Balamb Library project.</li>
               <li><b>25/11/25:</b> Added some more details about Collabrick's features.</li>
-              <li><b>23/11/25:</b> Added page with some development details for Collabrick. Text is still WIP!</li>
             </ul>
           </Paper>
 

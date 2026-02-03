@@ -81,13 +81,22 @@ function Balamb() {
                     <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; 27/1/2026: Testing and Bug Fixes
                     </Typography>
-                    <Typography variant="body1" component="p">
+                    <Typography variant="body1" component="p" mb={2}>
                         Balmab now has full <b>unit and integration tests</b> for repository and service methods!! 
                         Things are looking good, and fleshing out the test suite has allowed me to find and fix a few hidden bugs already. 
                         Next on the agenda is refactoring and cleaning up some of the more complex controller methods, and at the same time 
                         making sure all those endpoints have robust tests of their own. 
-                        I am still hoping to launch my first deployment at the end of the week, and have been researching everything I need in 
+                        I am still hoping to launch my first deployment at the end of the week (or next week at the latest), and have been researching everything I need in 
                         order to do so. Nervous but excited!
+                    </Typography>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; 04/02/2026: Testing Continues
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Controllers are now being tested! I am making sure all admin endpoints are well and truly secure before deployment. 
+                        The main thing I want to do before going ahead with getting things up and running is refactoring my image upload code, 
+                        as some stuff that should be in service methods is currently lying about in the controller. Once all this is done and tested, 
+                        look forward to actually seeing something go live! (Hopefully!!)
                     </Typography>
                 </Paper>
             </Box>  
@@ -99,7 +108,7 @@ function Balamb() {
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         <ul className="bullet-list">
-                            <li>Fill gaps in <s>repository, service, and</s> controller tests.</li>
+                            <li><s>Fill gaps in repository, service, and controller tests.</s></li>
                             <li>Add support for other media types, eg. games or movies.</li>
                             <li>Improve frontend experience and visual design.</li>
                             <li>Expand search filters to include searching by a specific string, filtering read/unread books, and more.</li>
@@ -115,9 +124,9 @@ function Balamb() {
                         <ul className="bullet-list">
                             <li>There is currently no confirmation prompt when deleting a book.</li>
                             <li>No feedback is given to users after successfully adding a book.</li>
-                            <li>Server-side validation for books does not always return appropriate error messages.</li>
+                            <li><s>Server-side validation for books does not always return appropriate error messages.</s></li>
                             <li>Some admin endpoints are not RESTful.</li>
-                            <li>Some backend exception handling is sloppy and inconsistent.</li>
+                            <li>Image uploading methods do not properly practice Separation of Concerns.</li>
                         </ul>
                     </Typography>
                 </Paper>
