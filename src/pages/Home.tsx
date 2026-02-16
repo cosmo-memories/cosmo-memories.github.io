@@ -30,11 +30,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
+              <li><b>16/02/26:</b> This site now has a custom domain name!</li>
               <li><b>04/02/26:</b> Added another Balamb dev diary entry.</li>
               <li><b>27/01/26:</b> Added latest dev diary entry to the Balamb project page.</li>
               <li><b>19/01/26:</b> Added details about Balamb and the first dev diary entry.</li>
               <li><b>14/12/25:</b> Updated Projects section to include my new Balamb Library project.</li>
-              <li><b>25/11/25:</b> Added some more details about Collabrick's features.</li>
             </ul>
           </Paper>
 
@@ -46,7 +46,7 @@ function Home() {
               <li>General code cleanup and optimization</li>
               <li>Ability to full view images without opening a new tab</li>
               <li>Rehost projects and add more info to Projects section</li>
-              <li>Decide on custom URL and move to independent hosting</li>
+              <li><s>Decide on custom URL and move to independent hosting</s></li>
               <li>New Updates section to list all the changes being made!</li>
             </ul>
           </Paper>
