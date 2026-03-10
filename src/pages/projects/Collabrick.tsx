@@ -28,7 +28,7 @@ function Collabrick() {
                         We also used a variety of external libraries and technologies during development, details of which may be found in the relevant sections below.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        You can check out Collabrick's source code <a href="https://github.com/cosmo-memories/collabrick">here</a>! I will have a live version up and running again soon.
+                        You can check out Collabrick's source code <a href="https://github.com/cosmo-memories/collabrick"><u>here</u></a>! I will have a live version up and running again soon.
                     </Typography>
                 </Paper>
                 

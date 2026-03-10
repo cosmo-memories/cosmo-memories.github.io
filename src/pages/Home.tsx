@@ -3,6 +3,7 @@ import { Box, Paper, Typography } from "@mui/material";
 import { BsStars } from "react-icons/bs";
 
 import '../styles/Home.css';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -17,10 +18,13 @@ function Home() {
           </Box>
 
           <Typography variant="body1" mt={2}>
-            I do <b>backend-focused</b>, full-stack software and web development; my main areas of interest are API programming and database design/management.
+            I do <b>backend-focused</b>, full-stack software and web development; my main areas of interest are API programming and database design/management. 
+          </Typography>
+          <Typography variant="body1" mt={1}>
+            I'm currently working on a full-stack (Java + Spring Boot + PostgreSQL) personal library catalogue application called <Link to="/projects/balamb"><u><b>Balamb Garden</b></u></Link>. Have a look if you're interested!
           </Typography>
           <Typography variant="body2" mt={1} color="text.secondary">
-            This personal page and portfolio are a <b>work in progress</b>! Many assets, including most of this very text, are missing or placeholders. Some elements of the layout may work improperly, especially on mobile devices.
+            This personal page and portfolio are a <b>perpetual work in progress</b>. Many assets, including most of this very text, may be missing or placeholders. Some elements of the layout may work improperly, especially on mobile devices.
           </Typography>
         </Paper>
 
@@ -30,11 +34,11 @@ function Home() {
               <FaStar className="star-icon" />&nbsp; Latest Updates:
             </Typography>
             <ul className="bullet-list">
+              <li><b>10/03/26:</b> Balamb is now live! Links and updates added to the project page.</li>              
               <li><b>16/02/26:</b> This site now has a custom domain name!</li>
               <li><b>04/02/26:</b> Added another Balamb dev diary entry.</li>
               <li><b>27/01/26:</b> Added latest dev diary entry to the Balamb project page.</li>
               <li><b>19/01/26:</b> Added details about Balamb and the first dev diary entry.</li>
-              <li><b>14/12/25:</b> Updated Projects section to include my new Balamb Library project.</li>
             </ul>
           </Paper>
 
@@ -46,7 +50,7 @@ function Home() {
               <li>General code cleanup and optimization</li>
               <li>Ability to full view images without opening a new tab</li>
               <li>Rehost projects and add more info to Projects section</li>
-              <li><s>Decide on custom URL and move to independent hosting</s></li>
+              <li><s>Decide on custom URL and</s> move to independent hosting</li>
               <li>New Updates section to list all the changes being made!</li>
             </ul>
           </Paper>

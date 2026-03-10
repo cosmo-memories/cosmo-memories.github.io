@@ -6,6 +6,17 @@ import { FaStar } from "react-icons/fa";
 import { PiStarFourFill } from "react-icons/pi";
 
 const projectData: ProjectCardProps[] = [
+    {
+    title: "Balamb Library",
+    image: "/images/balamb.png",
+    links: [
+      { label: "VISIT", href: "https://library.cosmo-memories.com"},
+      { label: "LEARN MORE", href: "/projects/balamb"}
+    ],
+    description:
+      "A brand-new lightweight library cataloging web app built with Spring Boot and designed for ease of use. Balamb is in its early stages and serves as a replacement/new iteration of my older FullStacks cataloging project.",
+    note: "Click the 'Learn More' link to read my dev diary and check out the source code, or visit the app itself!!",
+  },
   {
     title: "Collabrick",
     image: "/images/collabrick.png",
@@ -14,29 +25,8 @@ const projectData: ProjectCardProps[] = [
       { label: "LEARN MORE", href: "/projects/collabrick"}
     ],
     description:
-      "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly chatbot to help users manage their time and money. A full-stack application built in Java Spring, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
+      "A communication and budget tracking app for DIY enthusiasts, featuring real-time chat rooms and a friendly chatbot to help users manage their time and money. A full-stack application built in Java with Spring Boot, Collabrick was developed under the scrum framework over the course of a year as part of a 7-person agile team during my BSc study.",
     note: "I'm working on getting the app rehosted; you can check out the code, read about the development, and see screenshots at the links below!",
-  },
-    {
-    title: "Balamb Library",
-    image: "/images/balamb.png",
-    links: [
-      { label: "VISIT", href: "https://github.com/cosmo-memories/balamb"},
-      { label: "LEARN MORE", href: "/projects/balamb"}
-    ],
-    description:
-      "A brand-new lightweight library cataloging web app built with Spring Boot and designed for ease of use. Balamb is in its early stages and serves as a replacement/new iteration of my older FullStacks cataloging project.",
-    note: "More details, images, and a dev diary page coming very soon!",
-  },
-  {
-    title: "FullStacks: A Book Journal",
-    links: [
-      { label: "LEARN MORE", href: "/projects/fullstacks"}
-    ],
-    image: "/images/fullstacks.png",
-    description:
-      "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
-    note: "FullStacks is currently offline until I sort out new hosting for the API. Hopefully this will happen before the end of January. Sorry!",
   },
   {
     title: "Daguerreo: Mathematics Notes & Reference",
@@ -47,6 +37,16 @@ const projectData: ProjectCardProps[] = [
     image: "/images/daguerreo.png",
     description:
       "A small archive of math notes on a variety of topics from my time at university. Daguerreo is a static HTML site built with Jekyll and is a low-priority, perpetual work in progress; I am summarizing and uploading things as I have the time.",
+  },
+  {
+    title: "FullStacks: A Book Journal",
+    links: [
+      { label: "LEARN MORE", href: "/projects/fullstacks"}
+    ],
+    image: "/images/fullstacks.png",
+    description:
+      "A full-stack MERN project for playing with NoSQL databases and API design, in the form of a personal reading log where I record and track my reading habits. Check out the documentation for a full overview of API and database design decisions, and lots of chatter about the development process.",
+    note: "FullStacks has been superceded by Balamb, and is no longer online. You can still read about it here though!",
   },
   {
     title: "SENG Soccer Sim",
@@ -62,7 +62,7 @@ const projectData: ProjectCardProps[] = [
     title: "Coming Soon: Memoria Blog 2.0",
     description:
       "Coming very soon, a full-stack personal blog platform to replace my old Jekyll blog! There will be posts about my dev journey, and maybe video games and other stuff. Memoria 2.0 is planned to be fully handmade with a React frontend, REST API using Node.js and Express, and a relational database for post storage.",
-    note: "Expect a prototype by the end of January 2026!"
+    note: "Expect a prototype sometime in the first half of 2026!"
   },
     {
     title: "Coming Soon: More Stuff!!",

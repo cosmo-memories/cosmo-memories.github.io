@@ -19,13 +19,16 @@ function Balamb() {
                         <TbStarsFilled className="star-icon" />&nbsp; Balamb: A Full-Stack Library
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-                        <b>Balamb</b> is my latest and most active current project, and is a full-stack library catalogue web app using the same stack as <b>Collabrick</b>: <b>Spring Boot</b>, <b>Bootstrap</b>, and <b>Thymeleaf</b>. 
+                        <b>Balamb</b> (full name: <b>Balamb Garden</b>) is my latest and most active current project, and is a full-stack library catalogue web app using the same stack as <b>Collabrick</b>: <b>Spring Boot</b>, <b>Bootstrap</b>, and <b>Thymeleaf</b>. 
                         Balamb serves as a replacement for my previous <b>FullStacks</b> project, as I decided to switch to using tools that I find a lot more fun and robust to build with. 
-                        The initial prototype of Balamb uses a <b>H2</b> database, but will be migrated to <b>PostgreSQL</b> before deployment.
+                        The initial version of Balamb used a <b>H2</b> database for prototyping, and was migrated to <b>PostgreSQL</b> before deployment.
+                    </Typography>
+                    <Typography variant="body1" component="p" sx={{ mb: 2 }}>
+                        Balamb allows a user to catalogue and track a variety of essential information about their books, and I am actively working to add more ways for the owner (me!) to sort, filter, and show off their collections. 
+                        Below you can find the beginnings of a development diary where I discuss new features as I work on them; this will be moved to my new blog when it is up and running in the future.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        Balamb allows a user to catalogue and track a variety of essential information about their books, and I am actively working to add more ways for the user to sort, filter, and show off their collections. 
-                        Below you can find the beginnings of a development diary where I discuss new features as I work on them; this will be moved to my new blog when it is up and running in the future.
+                        The live version of Balamb is now available to view at <u><a href="https://library.cosmo-memories.com">library.cosmo-memories.com</a></u>. You can also check out the source code on <u><a href="https://github.com/cosmo-memories/balamb">my Github</a></u>.
                     </Typography>
                 </Paper> 
             </Box>
@@ -34,12 +37,11 @@ function Balamb() {
                 <Paper className="bounce" elevation={3}
                     sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", 
                             backgroundColor: "#000000ff",border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
-                    {/* <img src="/images/_" alt="_" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                    Image coming soon!
+                    <img src="/images/balamb3.png" alt="Balamb Library Home" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 </Paper>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
-                        <FaStar className="star-icon" />&nbsp; 19/1/2026: The Story So Far
+                        <FaStar className="star-icon" />&nbsp; 19/01/2026: The Story So Far
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
                         Every time I try to get this page started up, I find something else much more urgent to do, but here were are at last. 
@@ -65,7 +67,7 @@ function Balamb() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
-                        <FaStar className="star-icon" />&nbsp; 20/1/2026: Database Migration Successful
+                        <FaStar className="star-icon" />&nbsp; 20/01/2026: Database Migration Successful
                     </Typography>
                     <Typography variant="body1" component="p">
                         Balamb is now using <b>PostgreSQL</b>! I'm pretty excited about this despite it being a relatively simple step to take, 
@@ -104,6 +106,20 @@ function Balamb() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
                 <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
                     <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; 10/03/2026: Balamb Library is LIVE!!
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Actually, Balamb has been live for a week or so, but I wanted to make sure everything is stable and I had some sample data in place 
+                        before updating things over here. You can now view the app at <u><a href="https://library.cosmo-memories.com">library.cosmo-memories.com</a></u>. 
+                        Further updates will be coming in the near future, and I will keep adding more of my books over time (there are a lot of them). 
+                        You can check the Updates page on the app itself to see a more actively maintained list of TODOs and known issues, but I'll try to keep the list below updated as well.
+                    </Typography>
+                </Paper>
+            </Box> 
+
+            <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 3, mb: 4 }}>
+                <Paper className="bounce" elevation={3} sx={{ flex: 2, p: 4, borderRadius: 3 }}>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; TODOs
                     </Typography>
                     <Typography variant="body1" component="p" sx={{ mb: 2 }}>
@@ -125,8 +141,8 @@ function Balamb() {
                             <li>There is currently no confirmation prompt when deleting a book.</li>
                             <li>No feedback is given to users after successfully adding a book.</li>
                             <li><s>Server-side validation for books does not always return appropriate error messages.</s></li>
-                            <li>Some admin endpoints are not RESTful.</li>
                             <li>Image uploading methods do not properly practice Separation of Concerns.</li>
+                            <li><b>See the <u><a href="https://library.cosmo-memories.com/updates">Updates page</a></u> in the app itself for a full list of issues.</b></li>
                         </ul>
                     </Typography>
                 </Paper>

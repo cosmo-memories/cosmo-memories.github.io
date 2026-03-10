@@ -26,8 +26,9 @@ function FullStacks() {
                         with the end goal of building the FullStacks database into a complete catalogue of my personal home library — I love organizing books just as much as reading them.
                     </Typography>
                     <Typography variant="body1" component="p">
-                        FullStacks is <b>currently offline</b>; it will be back as soon as I can sort out new hosting for the API. When it returns, it will also be with a brand-new frontend design, so stay tuned. 
-                        Since I've decided to take this opportunity for a full rework, getting things back up will take a little longer than originally planned.
+                        <s>FullStacks is <b>currently offline</b>; it will be back as soon as I can sort out new hosting for the API. When it returns, it will also be with a brand-new frontend design, so stay tuned. 
+                        Since I've decided to take this opportunity for a full rework, getting things back up will take a little longer than originally planned.</s> FullStacks 
+                        has been deprecated in favor of <Link to="/projects/balamb"><u>Balamb Garden</u></Link>, which uses a whole new tech stack that will enable easier development and all kinds of cool new stuff.
                     </Typography>
                 </Paper>
                 
