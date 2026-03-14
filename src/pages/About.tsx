@@ -17,7 +17,7 @@ function About() {
               <GiStarSwirl className="star-icon" />&nbsp; About Me
             </Typography>
             <Typography variant="body1" component="p" sx={{ mb: 2 }}>
-              I'm <b>David</b>, a 32 year old <b>software developer</b>, <b>librarian</b>, and <b>writer</b> hailing from <b>Christchurch, New Zealand</b>, and this site is my personal page, work porfolio, pet project, and whatever else I need it to be.
+              I'm <b>David</b>, a 33 year old <b>software developer</b>, <b>librarian</b>, and <b>writer</b> hailing from <b>Christchurch, New Zealand</b>, and this site is my personal page, work porfolio, pet project, and whatever else I need it to be.
             </Typography>
             <Typography variant="body1" component="p" sx={{ mb: 2 }}>
               I wrote my first HTML at age nine for my Neopets.com user profile, and have been interested in computers and coding ever since.
@@ -30,9 +30,9 @@ function About() {
           </Paper>
           
           <Paper className="bounce" elevation={3}
-            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-            Image coming soon!
-            {/* <img src="/images/about-me.jpg" alt="About Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff",
+                  border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+            <img src="/images/about1.png" alt="About Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           </Paper>
         </Box>
 
@@ -61,9 +61,9 @@ function About() {
           </Paper>
 
           <Paper className="bounce" elevation={3}
-            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-            Image coming soon!
-            {/* <img src="/images/skills.jpg" alt="Skills Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff",
+                  border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+            <img src="/images/about2.png" alt="Skills Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           </Paper>
         </Box>
 
@@ -81,16 +81,19 @@ function About() {
               My favorite novel is Richard Adams' <i>Watership Down</i>, but I consider Anne McCaffrey's <i>Dragonriders of Pern</i> the single most influentional series on my tastes and style as both a reader and writer. Other favorite authors include Terry Pratchett, Douglas Adams, Claire North, and Naomi Novik. 
               In my own work I like exploring themes dealing with personal identity, autonomy... and dragons. I love dragons. Put a dragon on the cover of your book and I will buy it, no questions asked. 
             </Typography>
-            <Typography variant="body1" component="p">
+            <Typography variant="body1" component="p" sx={{ mb: 2 }}>
               I also enjoy <b>video games</b>, especially <b>RPGs</b>. I am a particularly big fan of the <i>Final Fantasy</i> series, and am a dedicated player of <i>Final Fantasy XIV Online</i>. 
               I'm always interested to learn about the design and development process behind any game I play, and have recently begun exploring independent gamedev in my free time. I'm looking forward to having more to share about this soon!
+            </Typography>
+            <Typography variant="body2" component="p" color="text.secondary">
+              Image © SQUARE ENIX CO., LTD. | FINAL FANTASY XIV
             </Typography>
           </Paper>
 
           <Paper className="bounce" elevation={3}
-            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff" }}>
-            Image coming soon!
-            {/* <img src="/images/hobbies.jpg" alt="Hobbies Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
+            sx={{ flex: 1, p: 0, borderRadius: 3, overflow: "hidden", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#000000ff",
+                  border: "2px solid #6366f1", "&:hover": { borderColor: "#6390f1" } }}>
+            <img src="/images/about3.png" alt="Hobbies Image" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           </Paper>
         </Box>
       </Box>

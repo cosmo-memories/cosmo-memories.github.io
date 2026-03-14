@@ -48,8 +48,9 @@ function Contact() {
             <Typography variant="h6" fontWeight="bold">
               LinkedIn
             </Typography>
-            <Link variant="body2" target="_blank" rel="noopener noreferrer" underline="none" color="text.secondary">
-              Coming soon!
+            <Link variant="body2" href="https://www.linkedin.com/in/david-williamson-9864703b4" target="_blank" rel="noopener noreferrer" underline="none" 
+                  color="text.secondary" sx={{ "&:hover": { color: theme.palette.secondary.main } }}>
+              David Williamson
             </Link>
           </Paper>
 
