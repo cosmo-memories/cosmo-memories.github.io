@@ -108,11 +108,22 @@ function Balamb() {
                     <Typography variant="h6" fontWeight="bold" mb={2}>
                         <FaStar className="star-icon" />&nbsp; 10/03/2026: Balamb Library is LIVE!!
                     </Typography>
-                    <Typography variant="body1" component="p">
+                    <Typography variant="body1" component="p" mb={2}>
                         Actually, Balamb has been live for a week or so, but I wanted to make sure everything is stable and I had some sample data in place 
                         before updating things over here. You can now view the app at <u><a href="https://library.cosmo-memories.com">library.cosmo-memories.com</a></u>. 
                         Further updates will be coming in the near future, and I will keep adding more of my books over time (there are a lot of them). 
                         You can check the Updates page on the app itself to see a more actively maintained list of TODOs and known issues, but I'll try to keep the list below updated as well.
+                    </Typography>
+                    <Typography variant="h6" fontWeight="bold" mb={2}>
+                        <FaStar className="star-icon" />&nbsp; 28/03/2026: Further Updates
+                    </Typography>
+                    <Typography variant="body1" component="p">
+                        Balamb has had a host of little updates and fixes since I last wrote anything here; the latest of these is the ability for admins to edit update posts, although 
+                        this is not live on the server yet. I may push it live tomorrow if I have time to finish testing. 
+                        As a fun detail, on the backend the ability to edit a note is restricted to the user who posted it, but the app currently has a single admin account (me!), so this has no functional purpose for now. 
+                        Also, from now on, I will not be updating this page for every single update; that information can be found in the app itself, though I will continue posting entries here either weekly or biweekly 
+                        to mention what has changed over that period. I will also upload some wireframes and other behind-the-scenes info as I work on my next major goal, which 
+                        will be a full redesign of the UI! I want things sleek, stylish, and responsive, rather than the slapdash placeholder presentation I currently have.
                     </Typography>
                 </Paper>
             </Box> 
